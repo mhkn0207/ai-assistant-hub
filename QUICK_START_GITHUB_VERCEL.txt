@@ -1,0 +1,87 @@
+═══════════════════════════════════════════════════════════════
+   🚀 QUICK START: Deploy to Vercel via GitHub 🚀
+═══════════════════════════════════════════════════════════════
+
+Follow these 5 simple steps:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1: Install Git
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Download & Install:
+👉 https://git-scm.com/download/win
+
+Then restart your terminal.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2: Set Up Git Repository
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Double-click: setup-github.bat
+
+OR manually run:
+  git init
+  git add .
+  git commit -m "Initial commit"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3: Create GitHub Repository
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: https://github.com/new
+2. Repository name: ai-assistant-hub
+3. Make it Public (or Private)
+4. DO NOT check "Add README"
+5. Click "Create repository"
+6. Copy the repository URL
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4: Push to GitHub
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Run these commands (replace YOUR_USERNAME):
+
+  git remote add origin https://github.com/YOUR_USERNAME/ai-assistant-hub.git
+  git branch -M main
+  git push -u origin main
+
+You'll need to login to GitHub.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 5: Deploy to Vercel
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: https://vercel.com/signup
+2. Click "Continue with GitHub"
+3. Authorize Vercel
+4. Click "Add New Project"
+5. Click "Import" next to your repository
+6. Click "Environment Variables" and add ALL these:
+
+   VITE_FIREBASE_API_KEY = (from your .env file)
+   VITE_FIREBASE_AUTH_DOMAIN = (from your .env file)
+   VITE_FIREBASE_PROJECT_ID = (from your .env file)
+   VITE_FIREBASE_STORAGE_BUCKET = (from your .env file)
+   VITE_FIREBASE_MESSAGING_SENDER_ID = (from your .env file)
+   VITE_FIREBASE_APP_ID = (from your .env file)
+   VITE_GEMINI_API_KEY = (from your .env file)
+
+7. Click "Deploy"
+8. Wait ~2 minutes
+9. Copy your live URL! 🎉
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎉 DONE! Your Website is Live! 🎉
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your URL will be:
+👉 https://ai-assistant-hub.vercel.app
+
+Share this with your friends! 🌍
+
+═══════════════════════════════════════════════════════════════
+
+For detailed instructions, see: GITHUB_VERCEL_SETUP.md
+
+═══════════════════════════════════════════════════════════════
+
