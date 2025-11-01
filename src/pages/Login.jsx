@@ -16,7 +16,20 @@ export default function Login() {
       navigate("/dashboard");
     } catch (error) {
       console.error("Error signing in:", error);
-      setError("Failed to sign in. Please try again.");
+      let errorMessage = "Failed to sign in. Please try again.";
+      
+      // Provide more helpful error messages
+      if (error.code === "auth/popup-closed-by-user") {
+        errorMessage = "Sign-in popup was closed. Please try again.";
+      } else if (error.code === "auth/popup-blocked") {
+        errorMessage = "Popup blocked. Please allow popups and try again.";
+      } else if (error.code === "auth/unauthorized-domain") {
+        errorMessage = "This domain is not authorized. Please add your domain to Firebase Console.";
+      } else if (error.message) {
+        errorMessage = `Error: ${error.message}`;
+      }
+      
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }

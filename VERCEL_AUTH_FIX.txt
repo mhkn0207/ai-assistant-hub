@@ -1,0 +1,44 @@
+═══════════════════════════════════════════════════════════════
+   🔧 FIX: "Failed to sign in" on Vercel
+═══════════════════════════════════════════════════════════════
+
+This error happens because Firebase doesn't recognize your Vercel domain.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUICK FIX (2 minutes):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Get Your Vercel URL
+👉 Copy your exact Vercel domain (e.g., ai-assistant-hub.vercel.app)
+
+STEP 2: Add Domain to Firebase
+👉 Go to: https://console.firebase.google.com/project/ai-assistant-f93c5/authentication/settings
+
+Scroll to "Authorized domains" → Click "Add domain"
+
+Enter your Vercel domain (without https://):
+  ai-assistant-hub.vercel.app
+
+Click "Add"
+
+STEP 3: Wait 1-2 minutes, then refresh your Vercel app!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ALSO CHECK:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ All 7 environment variables are set in Vercel:
+   - Go to: Vercel Dashboard → Your Project → Settings → Environment Variables
+   - Make sure all VITE_ variables are there
+   - Set for "Production" environment
+
+✅ Google Sign-In is enabled in Firebase:
+   - Go to: https://console.firebase.google.com/project/ai-assistant-f93c5/authentication/providers
+   - Make sure "Google" is enabled
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After adding the domain, sign-in will work! 🎉
+
+═══════════════════════════════════════════════════════════════
+
